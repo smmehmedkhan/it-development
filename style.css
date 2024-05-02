@@ -58,7 +58,7 @@ html,body {
 }
 .fluid-box {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,7 +132,7 @@ main, section, header, footer {
     z-index: 0;
 } 
 /* =========== Navigation Section / Nav-Bar =========== */
-nav.nav-menu {
+.nav-menu {
     width: 100%;
     height: 80px;
     background-color: #fff;
@@ -169,15 +169,15 @@ nav.nav-menu {
     text-decoration: none;
     text-align: center;
 }
-nav .links-box {
+.links-box {
     flex-direction: row;
     justify-content: space-around;
 }
-nav .links-box .link {
+.links-box .link {
     float: inline-end;
     list-style-type: none;
 }
-nav .links-box .link a {
+.links-box .link a {
     color: var(--grayish-blue);
     font-size: 16px;
     font-weight: 500;
@@ -186,22 +186,23 @@ nav .links-box .link a {
     text-decoration: none;
     text-transform: capitalize;
 }
-nav .links-box .link:hover a {
-    color: #57007B;
+.links-box .link:hover a {
+    color: var(--bright-red);
 }
-nav .nav-btn {
+.nav-btn {
     height: 44px;
     color: var(--white);
-    background: var(--indigo);
+    background-image: var(--indigo);
     padding: .5rem 1.25rem;
     border: 0;
     border-radius: .5rem;
     cursor: pointer;
+    transition: all 400ms ease-in;
 }
-nav .nav-btn:hover {
-    background: var(--magenta);
+.nav-btn:hover {
+    background-image: var(--magenta);
 }
-nav .nav-btn a {
+.nav-btn a {
     color: var(--white);
     font-size: var(--fonts-m);
     font-weight: 400;
@@ -209,16 +210,16 @@ nav .nav-btn a {
     text-transform: capitalize;
 }
 /* =============== Styling header of the page =============== */
-header {
+.header-page {
     width: 100dvw;
-    min-height: 100dvh;
     position: relative;
-    z-index: 2;
 }
 .hero-box {
     width: 80dvw;
     height: initial;
-    position: relative;
+    margin: 5rem auto;
+    position: relative;    
+    z-index: 2;
 }
 .hero-txt-box {
     width: 50%;
@@ -251,7 +252,7 @@ i.hero-txt-h-ramp {
     line-height: 1.5;
     margin: 2.5rem 0;
 }
-button.hero-txt-btn {
+.hero-txt-btn {
     color: var(--white);
     background-color: var(--bright-blue);
     font-size: var(--fonts-m);
@@ -260,19 +261,20 @@ button.hero-txt-btn {
     border: 0;
     border-radius: .5rem;
     cursor: pointer;
+    transition: all 400ms;
 }
-button.hero-txt-btn:hover {
+.hero-txt-btn:hover {
     background-color: var(--blue);
 }
 .hero-img-box {
     width: 50%;
 }
-img.hero-img {
+.hero-img {
     width: 40dvw;
     height: auto;
 }
 .hero-ellipse {
-    bottom: -160px;
+    bottom: -15%;
     left: 40%;
 }
 /* ============ Footer Section =========== */
@@ -965,7 +967,7 @@ i.blog-art-magenta {
     background-color: #f5f5f5;
 }
 .dev-card-box {
-    max-width: 80dvw;
+    width: 80dvw;
     height: auto;
     padding: 3rem;
     margin-bottom: 5rem;
@@ -1281,15 +1283,15 @@ i.dev-card-dtl-p-styl {
     rotate: 180deg;
 }
 /* ============== Media Queries =============== */
-@media screen and (max-width: 1200px) and (min-width: 1080px){
+@media screen and (min-width: 1080px) and (max-width: 1306px) {
     :root {
-        --fonts-m: 20px;
+        --fonts-m: 24px;
         --fonts-l: 28px;
         --fonts-xl: 36px;
         --fonts-xxl: 48px;
     }
 }
-@media screen and (max-width: 1080px) and (min-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1080px) {
     :root {
         --fonts-m: 20px;
         --fonts-l: 24px;
@@ -1297,7 +1299,7 @@ i.dev-card-dtl-p-styl {
         --fonts-xxl: 40px;
     }
 }
-@media screen and (max-width: 768px) and (min-width: 320px){
+@media screen and (min-width: 320px) and (max-width: 768px) {
     :root {
         --fonts-m: 20px;
         --fonts-l: 24px;
