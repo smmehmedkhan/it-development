@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Company Website</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animations.css" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="animations.css">
+    <script defer type="text/javascript" src="script.js"></script>
+    <script src="https://kit.fontawesome.com/64e3692e6c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- ========== Page Navigation Section, Nav-Bar ========== -->
@@ -14,15 +16,23 @@
             <img class="logo" src="images/SVG/vector-leaps.svg" />
             <a href="#home">Ik developers</a>
         </div>
-        <ul class="links-box flex-box">
-            <li class="link"><a href="#about-us">About us</a></li>
-            <li class="link"><a href="#services">Services</a></li>
-            <li class="link"><a href="#projects">Projects</a></li>
-            <li class="link"><a href="#blog">Blog</a></li>
-            <li class="link"><a href="#works">How it works</a></li>
-            <li class="link"><a href="#hire">Hire</a></li>
+        <ul class="nav-link-box flex-box">
+            <li class="nav-link"><a href="#about-us">About us</a></li>
+            <li class="nav-link"><a href="#services">Services</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#blog">Blog</a></li>
+            <li class="nav-link"><a href="#works">How it works</a></li>
+            <li class="nav-link"><a href="#hire">Hire</a></li>
         </ul>
         <button class="nav-btn"><a href="#">contact us</a></button>
+        <button class="nav-close-btn" id="nav-close-btn"><i class="fa-solid fa-xmark"></i></button>
+    </nav>
+    <nav class="nav-hamburger-menu flex-box">
+        <button class="nav-ham-btn" id="nav-ham-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="brand-logo flex-box">
+            <img class="logo" src="images/SVG/vector-leaps.svg" />
+            <a href="#home">Ik developers</a>
+        </div>
     </nav>
     <!-- ========= Hero Section, Page Header section =========== -->
     <header class="header-page fluid-box" id="home">
@@ -116,7 +126,7 @@
                         We <i class="ab-art-p-styl p-magenta">add development capacity</i> to tech teams. Our value isn’t limited to building teams but is equally distributed across the project lifecycle. We are a custom software development company that guarantees the successful delivery of your project.
                     </p>
                     <div class="grad-ln-box"></div>
-                    <button id="ab-btn">see more information <img class="arr-right" src="images/SVG/right-arrow.svg" /></button>
+                    <button id="ab-btn" class="ab-btn">see more information <i class="fa-solid fa-arrow-right"></i></button>
                 </article>
                 <aside class="ab-vid-box">
                     <img class="ab-vid" src="images/PNG/about-us-video.png" />
@@ -157,8 +167,8 @@
                     </div>
                 </div>
             </div>
-            <button class="pat-btn pat-btn-I flex-box"><img src="images/SVG/right-arrow-white.svg" /></button>
-            <button class="pat-btn pat-btn-II flex-box"><img src="images/SVG/right-arrow.svg" /></button>
+            <button class="pat-btn pat-btn-I flex-box"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="pat-btn pat-btn-II flex-box"><i class="fa-solid fa-arrow-right"></i></button>
             <div class="ellipse pat-ellipse"></div>
         </section>
         <!-- ============= Customer Reviews section =============-->
@@ -249,8 +259,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="rev-btn rev-btn-I flex-box"><img src="images/SVG/right-arrow.svg" /></button>
-                <button class="rev-btn rev-btn-II flex-box"><img src="images/SVG/right-arrow.svg" /></button>
+                <button class="rev-btn rev-btn-I flex-box"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="rev-btn rev-btn-II flex-box"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </section>
         <!-- ========== Case Studies section ========== -->
@@ -292,7 +302,7 @@
                     <button class="cs-card-art-b btn" id="read-more">read more <img src="images/SVG/right-arr.svg" /></button>
                 </article>
             </div>
-            <button class="cs-btn btn" id="see-more-btn">see more case studies <img src="images/SVG/right-arrow.svg" alt=""></button>
+            <button class="cs-btn btn" id="see-more-btn">see more case studies<i class="fa-solid fa-arrow-right"></i></button>
         </section>
         <!-- ============== Blog section ============== -->
         <section class="blog fluid-box" id="blog">
@@ -602,36 +612,27 @@
                 <div class="rs-card">
                     <img class="rs-card-img" src="images/PNG/desktop-image.png" />
                     <p class="rs-card-p paragraph">How to Build a Scalable Application up to 1 Million Users on AWS</p>
-                    <button class="btn rs-card-btn">Read more <img class="rs-card-btn-img" src="images/SVG/right-arrow.svg" /></button>
+                    <button class="rs-card-btn">Read more<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="rs-card">
                     <img class="rs-card-img" src="images/PNG/smartphone-image.png" />
                     <p class="rs-card-p paragraph">How to Build a Scalable Application up to 1 Million Users on AWS</p>
-                    <button class="btn rs-card-btn">Read more <img class="rs-card-btn-img" src="images/SVG/right-arrow.svg" /></button>
+                    <button class="rs-card-btn">Read more<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="rs-card">
                     <img class="rs-card-img" src="images/PNG/laptop-image.png" />
                     <p class="rs-card-p paragraph">How to Build a Scalable Application up to 1 Million Users on AWS</p>
-                    <button class="btn rs-card-btn">
-                        Read more 
-                        <img class="rs-card-btn-img" src="images/SVG/right-arrow.svg" />
-                    </button>
+                    <button class="rs-card-btn">Read more<i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                 <div class="rs-card">
                     <img class="rs-card-img" src="images/PNG/computer-image.png" />
                     <p class="rs-card-p paragraph">How to Build a Scalable Application up to 1 Million Users on AWS</p>
-                    <button class="btn rs-card-btn">
-                        Read more 
-                        <img class="rs-card-btn-img" src="images/SVG/right-arrow.svg" />
-                    </button>
+                    <button class="rs-card-btn">Read more<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="rs-card">
                     <img class="rs-card-img" src="images/PNG/glases-image.png" />
                     <p class="rs-card-p paragraph">How to Build a Scalable Application up to 1 Million Users on AWS</p>
-                    <button class="btn rs-card-btn">
-                        Read more 
-                        <img class="rs-card-btn-img" src="images/SVG/right-arrow.svg" />
-                    </button>
+                    <button class="rs-card-btn">Read more<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </section>
@@ -685,12 +686,12 @@
                 <p class="foot-cont-p paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem iure quasi, consectetur numquam vel laboriosam.</p>
                 <p>+880 16 0193 3918</p>
             </div>
-            <div class="foot-social-link-box flex-box">
-                <img src="images/SVG/facebook-logo.svg"  class="foot-social-link fb">
-                <img src="images/SVG/instragram-logo.svg" class="foot-social-link in">
-                <img src="images/SVG/twiter-logo.svg" class="foot-social-link tw">
-                <img src="images/SVG/linkedin-logo.svg" class="foot-social-link ln">
-            </div>
+            <ul class="foot-social-link-box fluid-box">
+                <li class="foot-social-link flex-box"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="foot-social-link flex-box"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="foot-social-link flex-box"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li class="foot-social-link flex-box"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
         </div>
         <di class="foot-hr"></di>
         <div class="foot-CR-box flex-box">
