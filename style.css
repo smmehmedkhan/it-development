@@ -13,7 +13,8 @@
     --fonts-p: "Open Sans", sans-serif;
     --black: #000;
     --white: #fff;
-    --white-bg: #fcfcfc;
+    --white-I: #fbfbfb;
+    --white-II: #f5f5f5;
     --blue: #0C06F7;
     --bright-blue: #0165FC;
     --grayish-blue:  #4A5568;
@@ -45,7 +46,7 @@ html,body {
     font-family: var(--fonts-p);
     font-weight: 500;
     overflow-x: hidden;
-    background-color: var(--white-bg);
+    background-color: var(--white-I);
     -webkit-margin-collapse: collapse;
     z-index: 0;
 }
@@ -66,8 +67,8 @@ html,body {
 }
 .grid-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     gap: 2rem;
 }
 .grid-item {
@@ -219,19 +220,18 @@ main, section, header, footer {
 }
 /* =============== Styling header of the page =============== */
 .header-page {
-    width: 100dvw;
+    width: 100%;
     position: relative;
 }
 .hero-box {
-    width: 80dvw;
+    width: 80%;
     height: initial;
-    margin: 5rem auto;
+    margin: 5rem 0;
     position: relative;    
     z-index: 2;
 }
 .hero-txt-box {
     width: 50%;
-    height: inherit;
 }
 .hero-txt {
     width: 100%;
@@ -760,7 +760,7 @@ img.client-img {
     background-color: var(--red-light);
 }
 .cs-card {
-    max-width: 80dvw;
+    width: 80%;
     height: initial;
     margin: 1rem 0;
     border: 1px solid var(--milky);
@@ -770,7 +770,7 @@ img.client-img {
                 -1px 6px 20px rgba(0, 0, 0, 0.19);
 }
 .cs-card img {
-    width: 40dvw;
+    width: 50%;
     height: auto;
     padding: 0;
     margin: 0;
@@ -1010,7 +1010,7 @@ i.blog-art-magenta {
 }
 /* ============ development approch section ============ */
 .development-approch {
-    background-color: #f5f5f5;
+    background-color: var(--white-II);
 }
 .dev-card-box {
     width: 80dvw;
@@ -1021,7 +1021,6 @@ i.blog-art-magenta {
 .dev-card {
     cursor: pointer;
     width: 660px;
-    max-height: 400px;
     padding: 2.5rem;
     border: 1px solid var(--milky);
     outline: 0;
@@ -1412,28 +1411,6 @@ i.dev-card-dtl-p-styl {
     .nav-close-btn:hover i {
         color: var(--bright-red);
     }
-}
-@media screen and (min-width: 1081px) and (max-width: 1306px) {
-    :root {
-        --fonts-m: 24px;
-        --fonts-l: 28px;
-        --fonts-xl: 36px;
-        --fonts-xxl: 48px;
-    }
-    .nav-link a {
-        font-size: var(--fonts-s);
-    }
-    .nav-btn a {
-        font-size: var(--fonts-n);
-    }
-}
-@media screen and (min-width: 769px) and (max-width: 1080px) {
-    :root {
-        --fonts-m: 20px;
-        --fonts-l: 24px;
-        --fonts-xl: 32px;
-        --fonts-xxl: 40px;
-    }
     .ab-art-box {
         width: 100%;
         margin: 5rem 2.5rem;
@@ -1496,17 +1473,64 @@ i.dev-card-dtl-p-styl {
     }
     .grid-box {
         grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
+    }
+    .dev-card-box {
+        width: 90%;
+    }
+    .dev-card {
+        width: 100%;
     }
     .hire-card {
         width: 90%;
     }
+    .wrk-box {
+        width: initial;
+        overflow-x: scroll;
+    }
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 1081px) and (max-width: 1400px) {
+    :root {
+        --fonts-m: 24px;
+        --fonts-l: 28px;
+        --fonts-xl: 36px;
+        --fonts-xxl: 48px;
+    }
+    .nav-link a {
+        font-size: var(--fonts-s);
+    }
+    .nav-btn a {
+        font-size: var(--fonts-n);
+    }
+}
+@media screen and (min-width: 925px) and (max-width: 1080px) {
+    :root {
+        --fonts-m: 20px;
+        --fonts-l: 28px;
+        --fonts-xl: 36px;
+        --fonts-xxl: 40px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 924px) {
+    :root {
+        --fonts-m: 20px;
+        --fonts-l: 24px;
+        --fonts-xl: 32px;
+        --fonts-xxl: 40px;
+    }
+}
+@media screen and (min-width:545px) and (max-width: 768px) {
     :root {
         --fonts-m: 20px;
         --fonts-l: 24px;
         --fonts-xl: 28px;
         --fonts-xxl: 36px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 544px) {
+    :root {
+        --fonts-m: 18px;
+        --fonts-l: 22px;
+        --fonts-xl: 24px;
+        --fonts-xxl: 32px;
     }
 }
