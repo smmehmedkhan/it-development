@@ -1,3 +1,11 @@
+@keyframes verticalNav {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 .hero-txt, .ab-art, .blog-art {
     animation: heroText 2s ease-in-out;
 }

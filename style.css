@@ -13,7 +13,7 @@
     --fonts-p: "Open Sans", sans-serif;
     --black: #000;
     --white: #fff;
-    --white-bg: #fafafa;
+    --white-bg: #fcfcfc;
     --blue: #0C06F7;
     --bright-blue: #0165FC;
     --grayish-blue:  #4A5568;
@@ -504,8 +504,7 @@ p.serv-prog-num {
 }
 .ab-art-box {
     width: 80dvw;
-    min-height: 60dvh;
-    margin: 10rem auto;
+    margin: 10rem 0;
     flex-direction: row;
 }
 .ab-art {
@@ -553,7 +552,7 @@ p.serv-prog-num {
     height: auto;
     margin: 1rem;
 }
-img.ab-vid {
+.ab-vid {
     width: 40dvw;
     height: auto;
 }
@@ -776,7 +775,7 @@ img.client-img {
     padding: 0;
     margin: 0;
 }
-.cs-card article.cs-card-art {
+.cs-card-art {
     width: 50%;
     height: 34.5dvh;
     padding: 0 3rem;
@@ -802,7 +801,7 @@ img.client-img {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     cursor: pointer;
 }
@@ -1133,8 +1132,9 @@ i.dev-card-dtl-p-styl {
     flex-flow: row wrap;
 }
 .ts-comp {
-    width: 15dvw;
-    height: 15dvh;
+    width: 200px;
+    height: 200px;
+    padding: 2rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1143,7 +1143,7 @@ i.dev-card-dtl-p-styl {
     outline: 2px solid var(--milky);
 }
 .ts-comp .ts-comp-img {
-    width: 8dvw;
+    width: 200px;
 }
 .ts-comp .ts-comp-img.go-logo {
     width: auto;
@@ -1384,6 +1384,7 @@ i.dev-card-dtl-p-styl {
         height: 100dvh;
         flex-direction: column;
         justify-content: center;
+        animation: verticalNav 500ms ease-in-out 100ms both;
     }
     .nav-link-box {
         width: 100%;
@@ -1432,6 +1433,73 @@ i.dev-card-dtl-p-styl {
         --fonts-l: 24px;
         --fonts-xl: 32px;
         --fonts-xxl: 40px;
+    }
+    .ab-art-box {
+        width: 100%;
+        margin: 5rem 2.5rem;
+        flex-direction: column;
+    }
+    .ab-art {
+        width: 80%;
+        margin-right: 0;
+    }
+    .ab-vid-box {
+        width: 80%;
+    }
+    .ab-vid {
+        width: 100%;
+    }
+    .pat-btn-I {
+        right: 90px;
+    }
+    .pat-btn-II {
+        right: 20px;
+    }
+    .rev-q-box-I {
+        top: 0;
+        left: calc(50% - 300px);
+    }
+    .rev-q-box-II {
+        top: 0;
+        right: calc(50% - 300px);
+    }
+    .cs-card {
+        width: 90%;
+        flex-direction: column;
+    }
+    .cs-card img {
+        width: 100%;
+    }
+    .cs-card-art {
+        width: 100%;
+    }
+    .blog-box {
+        width: 90%;
+        padding: 0;
+    }
+    .blog-art-box {
+        width: 90%;
+        margin: 2.5rem 0;
+        flex-direction: column;
+    }
+    .blog-art {
+        width: 100%;
+        margin: 2.5rem 0;
+    }
+    .blog-img-box {
+        width: 100%;
+        margin: 0;
+    }
+    .blog-img {
+        width: 100%;
+        height: auto;
+    }
+    .grid-box {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+    .hire-card {
+        width: 90%;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
