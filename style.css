@@ -801,8 +801,6 @@ img.client-img {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
     cursor: pointer;
 }
 .cs-card-art-b img {
