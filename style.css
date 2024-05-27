@@ -282,7 +282,7 @@ i.hero-txt-h-ramp {
     height: auto;
 }
 .hero-ellipse {
-    bottom: -15%;
+    bottom: -20px;
     left: 40%;
 }
 /* ============ Footer Section =========== */
@@ -1120,18 +1120,17 @@ i.dev-card-dtl-p-styl {
     -webkit-text-fill-color: transparent;
 }
 .ts-comp-box {
-    width: 80dvw;
-    min-height: 60dvh;
-    margin: 2.5rem auto;
+    width: 80%;
+    margin: 5rem 0;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-around;
     flex-flow: row wrap;
+    flex-basis: 260px;
 }
 .ts-comp {
-    width: 200px;
-    height: 200px;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 2.5rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1139,12 +1138,12 @@ i.dev-card-dtl-p-styl {
 .ts-comp:hover {
     outline: 2px solid var(--milky);
 }
-.ts-comp .ts-comp-img {
-    width: 200px;
+.ts-comp-img {
+    width: 220px;
 }
-.ts-comp .ts-comp-img.go-logo {
+.ts-comp-img.go-logo {
     width: auto;
-    height: 10dvh;
+    height: 100px;
 }
 /* ============ Our work section ============= */
 .wrk-box {
@@ -1376,12 +1375,12 @@ i.dev-card-dtl-p-styl {
         font-size: var(--fonts-xl);
     }
     .nav-menu.show {
-        display: flex;
         width: 60%;
         height: 100dvh;
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        animation: verticalNav 500ms ease-in-out 100ms both;
+        animation: fade-in 500ms ease-in-out 100ms both;
     }
     .nav-link-box {
         width: 100%;

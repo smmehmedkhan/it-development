@@ -1,4 +1,4 @@
-@keyframes verticalNav {
+@keyframes fade-in {
     from {
         transform: translateX(-100%);
     }
